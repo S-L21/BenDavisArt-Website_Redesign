@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ben Davis Art</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" contents="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="bgimg bgimg-1">
+        <div class="header">
+            <h1>Ben Davis Art</h1>
+            <div class="scroll-down"></div>
+        </div>
+        <div class="bgimg bgimg-2">
+        </div>
+    </div>
+
+<!--Navigation Bar-->
+    <div id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
+
+<!--Sidebar Navigation-->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a>
+    <a href="portfolio.html">Portfolio</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;&nbsp;&nbsp;&nbsp;Navigation Menu </button>
+</div>
+
+<!--Slideshow-->
+    <div class="carousel-box">
+        <div class="mySlides fade">
+            <img src="images/If_We_Could_ReWrite_The_Stars.jpg" style="width:100%">
+            <div class="text">If We Could Rewrite the Stars</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/Starship_Capitola.jpeg" style="width:100%">
+            <div class="text">Starships Capitola</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/Sunrise_Obscured_By_Flowers.jpg" style="width:100%">
+            <div class="text">Sunrise Obscured By Flowers</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/West_Cliff.jpg" style="width:100%">
+            <div class="text">West Cliff</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/Moonlight_Sonata.jpg" style="width:100%">
+            <div class="text">Moon Light Sonata</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/Portriai_Of_An_Artist_On_Roller_Skates.jpg" style="width:100%">
+            <div class="text">Portrait Of An Artist On Roller Skates</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/The_Canvas_Can_Do_Miracles.jpg" style="width:100%">
+            <div class="text">The Canvas Can Do Miracles</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+
+    <!--Projects-->
+    <div class="projects">
+        <div class="section" style="background-image: url(images/A_Sailors_Delight.jpg)">
+            <div class="button">
+                <a href="gallery.html">Gallery</a>
+            </div>
+        </div>
+        <div class="section" style="background-image:url(images/Escape_From_Beigeland.jpg)">
+            <div class="button">
+                <a href="shop.html">Shop</a>
+            </div>
+        </div>
+        <div class="section" style="background-image:url(images/Wine_With_A_Great_Bouquet.jpg)">
+            <div class="button">
+                <a href="portfolio.html">All Projects</a>
+            </div>
+        </div>
+    </div>
+   
+   <!--Footer-->
+   <div class="footer1">
+       <div class="footertext"><h2>You can contact the artist at bendavisartwork@gmail.com but to be clear, he's probably not interested.</h2></div>   
+         <div class="smalltext"><p>All artwork belongs to the artist Ben Davis</p> </div>
+   </div>
+   
+   <div class="lowerfooter">
+       <P>Website Designed By: Monica, Siobhan, Simon, &amp; Scarlet</P>
+   </div>
+
+   
+     <script>
+/** Slideshow Script **/
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+/** Sidebar Menu **/
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px"; document.getElementById("main").style.marginleft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginleft = "0";
+        }
+    </script>
+</body>

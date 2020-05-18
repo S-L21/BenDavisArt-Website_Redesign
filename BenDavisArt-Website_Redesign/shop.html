@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ben Davis Art - Shop</title>   
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" contents="width=device-width, initial-scale=1">
+</head>
+<body>
+
+        <div class="shopheader">
+            <h6>Shop</h6>
+        </div>
+
+
+<!--Navigation Bar-->
+    <div id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
+
+<!--Sidebar Navigation-->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a>
+    <a href="portfolio.html">Portfolio</a>
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;&nbsp;&nbsp;&nbsp;Navigation Menu </button>
+</div>
+
+<div class="grid-container">
+ <div>
+    <h1>Purchasing Information:</h1> 
+    <p>All items listed below are able to be purchased via contacting Ben Davis directly at bendavis54@gmail.com.</p>
+    <p>All images included within the Gallery are available for use for any of the following items:</p>
+    
+</div>
+ 
+  <div>
+  <h1>Cards</h1> 
+      <img src="images/cards.png">
+      <h2>$6.99</h2>
+      <p>5" x 7" cards, available in landscape and portrait.</p>
+  <br />
+  <h1>Printed T-Shirt</h1> 
+      <img src="images/tshirt.jpg">
+      <h2>$20.99</h2>
+      <p> Screen printed cotton t-shirt, available in sizes ranging from XS-XXL</p>
+  <br />
+  <h1>Giclees</h1>
+  <img src="images/giclee.png">
+  <h2>$29.99</h2>
+  <p> 8" x 10" High-quality inidividually inkjet printed giclees.</p> 
+  <br />
+  <h1>Enhanced Giclees</h1>
+  <img src="images/giclee_enhanced.png">
+  <h2>$39.99</h2>
+  <p> 9" x 12" Enhanced high-quality inidividually inkjet printed giclees.</p>
+<br />
+  <h1>Posters</h1>
+  <img src="images/posters.png">
+  <h2>$30-$50</h2>
+  <p> Screen printed posters avaiable in varying sizes: 18" x 24" ($30), 24" x 36" ($40), and 27" x 40" ($50).</p>
+   
+</div>
+<script>
+    /** Sidebar Menu **/
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px"; document.getElementById("main").style.marginleft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginleft = "0";
+        }
+</script>
+
+</body>
+</html>
